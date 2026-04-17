@@ -8,15 +8,25 @@ const RestrauntCard=(props)=>{
     const{cloudinaryImageId,name,cuisines,avgRating,costForTwo}=resData?.info;
     const{deliveryTime}=resData?.info?.sla;
     return(
-        <div className="res-card" style={{backgroundColor:"#f0f0f0"}}>
-            <img  className="res-logo"alt="resimg" src={CDN_URL+
-                cloudinaryImageId}/>
-            <h3>{name}</h3>
-            <h4>{cuisines.join(" , ")}</h4> 
-            <h4>{avgRating}</h4>
-            <h4>{deliveryTime} mins</h4>
-            <h4>{costForTwo}</h4>
-        </div>
+        <div className="res-card m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:shadow-lg transition-all h-[380px] flex flex-col">
+  <img 
+    className="rounded-lg aspect-video object-cover" 
+    src={CDN_URL + cloudinaryImageId} 
+  />
+ 
+  <div className="flex flex-col flex-grow justify-between py-2">
+    <div>
+      <h3 className="font-bold text-lg truncate">{name}</h3>
+      <h4 className="text-gray-500 text-sm line-clamp-2">{cuisines.join(", ")}</h4>
+    </div>
+    
+    <div className="mt-auto">
+      <h4 className="font-medium">{avgRating} stars</h4>
+      <h4 className="text-gray-600">{deliveryTime} mins</h4>
+      <h4 className="text-gray-600">{costForTwo}</h4>
+    </div>
+  </div>
+</div>
     )
 };
 

@@ -1,9 +1,11 @@
-import RestrauntCard from "./RestrauntCard";
+import RestrauntCard,{withPromotedLabel} from "./RestrauntCard";
 import resList from "../utils/mockData";
-import {useEffect, useState} from "react";
+import {useEffect, useState,useContext} from "react";
 import Shimmer from "./Shimmer";
 import {Link} from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
+
 
 
 
@@ -11,11 +13,16 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 const Body=()=>{
 
     
+
+    
     let [ListOfRestraunt ,setListOfRestraunt]= useState([]);
 
     let [filteredRestraunt, setFilteredRestraunt]=useState([]);
 
     let[searchText, setSearchText]=useState("");
+
+    const RestrauntCardPromoted=withPromotedLabel(RestrauntCard);   
+  
 
     useEffect(()=>{
         fetchData();
@@ -42,7 +49,7 @@ const onlineStatus=useOnlineStatus();
 if (onlineStatus ===  false) return <h1>You'r Offline</h1>
 
 
-
+const {setUserName,loggedInUser}=useContext(UserContext);
     return ListOfRestraunt.length===0 ? (
     <Shimmer/>
 ) : (
@@ -69,14 +76,23 @@ if (onlineStatus ===  false) return <h1>You'r Offline</h1>
                 FILTER
 
                 </button>
-            </div>  
+
            
+            </div>  
+            <div>
+                <label htmlFor="search" className="m-4 px-4">User Name:</label>
+                <input type="text" placeholder="Search" className="search-input text-center w-62 p-1 border border-solid black rounded-md" value={loggedInUser} onChange={(e)=>setUserName(e.target.value)} />
+            </div>
             </div>
 
             <div className="res-container flex  flex-wrap justify-center gap-8 py-8 px-4">
                 {filteredRestraunt.map((restaurant) => (
                     <Link to={"/restraunt/"+restaurant.info.id} key={restaurant.info.id}>
+                        {
+                        restaurant.info.avgRating>4.2?
+                        <RestrauntCardPromoted resData={restaurant}/>:
                         <RestrauntCard resData={restaurant} />
+                        }
                     </Link>
                     
                 ))}

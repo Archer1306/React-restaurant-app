@@ -30,4 +30,18 @@ const RestrauntCard=(props)=>{
     )
 };
 
+export const withPromotedLabel=(RestrauntCard)=>{
+  return(resData)=>{
+    return(
+      <div>
+        <label className="bg-red-500 text-white px-2 py-1 rounded absolute m-4" >
+          <h2>promoted</h2>
+        </label>
+        <RestrauntCard {...resData}/>
+      </div>
+    )
+
+  };
+};
+
 export default RestrauntCard;

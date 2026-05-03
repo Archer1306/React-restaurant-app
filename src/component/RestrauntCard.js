@@ -5,10 +5,12 @@ const RestrauntCard=(props)=>{
 
     const{ resData }=props;
 
+    
+
     const{cloudinaryImageId,name,cuisines,avgRating,costForTwo}=resData?.info;
     const{deliveryTime}=resData?.info?.sla;
     return(
-        <div className="res-card m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:shadow-lg transition-all h-[380px] flex flex-col">
+        <div data-testid="resCard" className="res-card m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:shadow-lg transition-all h-[380px] flex flex-col">
   <img 
     className="rounded-lg aspect-video object-cover" 
     src={CDN_URL + cloudinaryImageId} 

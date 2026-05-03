@@ -1,0 +1,71 @@
+{
+    "info": {
+        "id": "391590",
+        "name": "The Belgian Waffle Co.",
+        "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/16/6fbfb04f-18a0-4d66-b5e4-0b240f23649a_391590.jpg",
+        "locality": "Sowcarpet",
+        "areaName": "George Town",
+        "costForTwo": "₹200 for two",
+        "cuisines": [
+            "Waffle",
+            "Desserts",
+            "Ice Cream",
+            "Beverages"
+        ],
+        "avgRating": 4.4,
+        "veg": true,
+        "parentId": "2233",
+        "avgRatingString": "4.4",
+        "totalRatingsString": "2.5K+",
+        "sla": {
+            "deliveryTime": 46,
+            "lastMileTravel": 7.5,
+            "serviceability": "SERVICEABLE",
+            "slaString": "45-50 mins",
+            "lastMileTravelString": "7.5 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2026-05-04 01:15:00",
+            "opened": true
+        },
+        "badges": {},
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {},
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "₹150 OFF",
+            "subHeader": "ABOVE ₹999",
+            "discountTag": "FLAT DEAL"
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+            "aggregatedRating": {
+                "rating": "--"
+            }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+        "context": "seo-data-ae892c67-ee8b-48c4-a760-9f62e00ab2f9"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/city/chennai/the-belgian-waffle-co-sowcarpet-george-town-rest391590",
+        "type": "WEBLINK"
+    }
+}

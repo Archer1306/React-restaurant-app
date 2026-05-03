@@ -18,17 +18,10 @@ class UserClass extends React.Component{
 
         return(
         <div >
-            <h1>User Profile Class</h1>
+            
             <p>Name: {name}</p>
             <p>Email: {mail}</p>
-            <p>Count: {count}</p>
-            <p>Count1: {count1}</p>
-            <button onClick={()=>
-                this.setState({
-                    count:this.state.count+1
-                })
-            }>Count</button>
-             
+           
         </div>
     )
     }

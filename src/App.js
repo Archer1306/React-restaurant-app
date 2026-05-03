@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./component/Header";
 import Body from "./component/Body";
+import Contact from "./component/Contact";  
 import About from "./component/About";
-import Contact from "./component/Contact";
 import RestrauntMenu from "./component/RestrauntMenu";
 import Error from "./component/Error";
 import {useState,useEffect} from "react";
@@ -55,14 +55,13 @@ const appRouter=createBrowserRouter([
         element:<About/>,
     },
     {
-
-      path:"/contact",
-      element:<Contact/>,
-    },
-    {
         path:"/restraunt/:resId",
         element:<RestrauntMenu/>,   
 
+    },
+    {
+        path:"/contact",
+        element:<Contact/>,
     },
     {
         path:"/cart",

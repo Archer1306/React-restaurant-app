@@ -56,7 +56,7 @@ const {setUserName,loggedInUser}=useContext(UserContext);
         <div className="body">
             <div className="filter flex items-center justify-center">
                 <div className="search m-4 px-4 items-center justify-center ">
-                <input type="text" placeholder="Search" className="search-input text-center w-62 p-1 border border-solid black rounded-md" value={searchText} onChange={(e)=>setSearchText(e.target.value)} />
+                <input type="text" placeholder="Search" data-testid="searchInput" className="search-input text-center w-62 p-1 border border-solid black rounded-md" value={searchText} onChange={(e)=>setSearchText(e.target.value)} />
 
                 <button className="search-btn m-4 px-4  items-center rounded-md  bg-orange-300" onClick={()=>{
                     let data=ListOfRestraunt.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()));
